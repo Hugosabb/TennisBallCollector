@@ -106,8 +106,8 @@ def detect_circles(image, rgb_filter, radius_max, radius_min):
 
 def detect_robot(image, lenght_max=10000, lenght_min =0, radius_max=1000, radius_min=0):
 
-	mask_red, circles_red = detect_circles(image, (255, 0, 0)*2, radius_max, radius_min)
-	mask_green, circles_green = detect_circles(image, (0, 255, 0)*2, radius_max, radius_min)
+	mask_red, circles_red = detect_circles(image, (130, 0, 0, 255, 2, 2), radius_max, radius_min)
+	mask_green, circles_green = detect_circles(image, (0, 130, 0, 2, 255, 2), radius_max, radius_min)
 
 	mask = cv2.bitwise_or(mask_green, mask_red)
 
